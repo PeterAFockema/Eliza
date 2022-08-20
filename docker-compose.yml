@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  lab:              # This is just a name - it is used in our docker-compose command.
+    build: .        # Build an image using the Dockerfile in directory "."
+    volumes:
+      - .:/Eliza     # Map the directory "." on the host into "/Eliza" in the container.
+    ports:
+      - "8080:8080"
