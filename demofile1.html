@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Input to talk to ELIZA</h1>
+<p>Type your answer into the textbox.</p>
+Chat to ELIZA:<input type="text" id="elizaChat">
+<script>
+    document.getElementById("elizaChat").addEventListener("change", myFunction);
+
+    function myFunction() {
+        var x = document.getElementById("elizaChat");
+        x.value = x.value.toUpperCase();
+    }    
+</script>
+</body>
+</html>
