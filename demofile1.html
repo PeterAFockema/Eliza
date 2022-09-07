@@ -4,13 +4,13 @@
 <h1>Input to talk to ELIZA</h1>
 <p>Type your answer into the textbox.</p>
 Chat to ELIZA:<input type="text" id="elizaChat">
+<p id="response">ELIZA will respond here.</p>
 <script>
-    document.getElementById("elizaChat").addEventListener("change", myFunction);
-
-    function myFunction() {
+    document.getElementById("elizaChat").addEventListener("change", elizaResponse);
+    function elizaResponse() {
         var x = document.getElementById("elizaChat");
-        x.value = x.value.toUpperCase();
-    }    
+        document.getElementById("response").innerHTML = x.value;
+    }
 </script>
 </body>
 </html>
